@@ -1,1 +1,70 @@
+html, body{
+    margin:0;
+    padding:0;
+    
+    background-color:#f8f5ef;
+    background-image:url("hanji.png");
+    background-repeat:repeat;
+    background-size:900px;
+}
+
+body{
+    display:flex;
+    justify-content:center;
+    font-family: "Noto Serif KR", serif;
+    color:#2d2b28;
+}
+
+.cover{
+    border-top:1px solid rgba(140,120,90,.15);
+    border-bottom:1px solid rgba(140,120,90,.15);
+    
+    width:100%;
+    max-width:480px;
+
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding:80px 40px;
+
+    box-sizing:border-box;
+
+    background:rgba(255,255,255,0.25);
+    backdrop-filter:blur(1px);
+}
+
+.small{
+    letter-spacing:0.5em;
+    font-size:14px;
+    color:#7d766d;
+}
+
+.title{
+    margin-top:54px;
+    font-size:54px;
+    letter-spacing:.42em;
+    font-weight:400;
+    color:#2a2725;
+}
+    
+.korean{
+    margin-top:18px;
+    font-size:18px;
+    letter-spacing:.9em;
+    color:#4d4843;
+}
+
+.bottom{
+    margin-top:140px;
+    font-size:12px;
+    letter-spacing:.3em;
+    color:#9b948c;
+}
 
