@@ -27,7 +27,7 @@ body{
     display:flex;
     flex-direction:column;
 
-    justify-content:center;
+    justify-content:flex-start;
     align-items:center;
 
     text-align:center;
@@ -66,6 +66,10 @@ body{
     font-size:12px;
     letter-spacing:.3em;
     color:#9b948c;
+}
+
+.top-space{
+    height:12vh;
 }
 
 </style>
