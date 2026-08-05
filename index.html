@@ -27,12 +27,11 @@
     padding:24px 0;
   }
   .card{
-.card{
     width:100%;
     max-width:400px;
     background-image:url('back.jpg');
     background-size:cover;
-    background-position:center;
+    background-position:center top;  /* 예: 위쪽 기준으로 보이게 */
     border-radius:28px;
     overflow:hidden;
     box-shadow:0 20px 45px rgba(180,101,122,0.28);
@@ -42,10 +41,7 @@
   .hero{
     position:relative;
     padding:38px 24px 20px;
-    background:
-      radial-gradient(circle at 15% 10%, rgba(244,201,196,0.9), transparent 55%),
-      radial-gradient(circle at 90% 0%, rgba(143,167,137,0.55), transparent 45%),
-      linear-gradient(180deg, #FFF3EC 0%, var(--cream) 85%);
+    background:transparent;  
     text-align:center;
   }
   .petal{ position:absolute; opacity:0.9; }
