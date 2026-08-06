@@ -9,13 +9,9 @@
 <style>
   :root{
     --cream:#FFF9F3;
-    --blush:#F4C9C4;
     --peach:#F2A88F;
-    --sage:#8FA789;
-    --sage-deep:#5C7256;
     --plum:#B5657A;
     --text:#4A3F3B;
-    --gold:#D2A45C;
   }
   *{box-sizing:border-box;}
   body{
@@ -29,139 +25,63 @@
   .card{
     width:100%;
     max-width:400px;
-    background-image:url('back.jpg');
-    background-size:cover;
-    background-position:center top;  /* 예: 위쪽 기준으로 보이게 */
     border-radius:0;
     overflow:hidden;
     box-shadow:0 20px 45px rgba(180,101,122,0.28);
     position:relative;
     color:var(--text);
+    background:var(--cream);
   }
-  .hero{
-    position:relative;
-    padding:38px 24px 20px;
-    background:transparent;  
+  .card-image{
+    display:block;
+    width:100%;
+    height:auto;   /* 원본 비율 그대로, 잘리지 않음 */
+  }
+  .content-below{
+    padding:28px 26px 30px;
     text-align:center;
   }
 
-  .eyebrow{
-    font-size:12px;
-    letter-spacing:0.35em;
-    color:var(--sage-deep);
-    margin:0 0 10px;
-    font-weight:600;
-  }
-  .title{
-    font-family:'Gowun Batang', serif;
-    font-weight:700;
-    font-size:26px;
-    color:var(--plum);
-    margin:0 0 6px;
-    line-height:1.35;
-  }
-  .subtitle{
-    font-size:13px;
-    color:#8a7a73;
-    margin:0 0 18px;
-  }
-  .name-badge{
+  .btn-row{ display:flex; justify-content:center; margin-bottom:26px; }
+  .btn-solid{
     display:inline-block;
-    font-family:'Gowun Batang', serif;
-    font-size:21px;
-    font-weight:700;
-    color:var(--text);
-    background:#fff;
-    padding:9px 22px;
-    border-radius:999px;
-    box-shadow:0 6px 14px rgba(210,164,92,0.25);
-    border:1px solid rgba(210,164,92,0.4);
-  }
-
-  .body-sec{ padding:26px 26px 8px; }
-
-  .message{
-    font-size:14.5px;
-    line-height:1.9;
-    text-align:center;
-    color:var(--text);
-    margin:0 0 26px;
-  }
-
-  .info-card{
-    background:linear-gradient(135deg, #FBEFE9, #F6F1E4);
-    border-radius:18px;
-    padding:18px 20px;
-    margin-bottom:20px;
-  }
-  .info-row{
-    display:flex;
-    align-items:flex-start;
-    gap:12px;
-    padding:8px 0;
-  }
-  .info-icon{
-    flex:0 0 26px;
-    font-size:16px;
-    margin-top:1px;
-  }
-  .info-text{ flex:1; font-size:14px; line-height:1.6; }
-  .info-text b{ display:block; font-size:13px; color:var(--sage-deep); margin-bottom:2px; font-weight:700;}
-  .info-sub{ font-size:12.5px; color:#93857e; margin-top:2px;}
-
-  .btn-row{ display:flex; gap:10px; margin-bottom:22px; }
-  .btn{
-    flex:1;
-    text-align:center;
-    padding:13px 8px;
+    padding:12px 30px;         /* 버튼 폭 여기서 조절 (숫자 줄이면 더 좁아져요) */
     border-radius:14px;
     font-size:13.5px;
-    text-decoration:none;
     font-weight:600;
-    border:none;
+    text-decoration:none;
+    color:#fff;
+    background:linear-gradient(135deg, var(--peach), var(--plum));
+    box-shadow:0 8px 16px rgba(181,101,122,0.3);
   }
-  .btn.solid{ background:linear-gradient(135deg, var(--peach), var(--plum)); color:#fff; box-shadow:0 8px 16px rgba(181,101,122,0.3);}
-  .btn.outline{ background:#fff; color:var(--sage-deep); border:1.5px solid var(--sage);}
 
-  .host{
-    text-align:center;
-    font-size:14px;
-    color:var(--text);
-    line-height:1.9;
-    padding-bottom:30px;
+  .host{ font-size:14px; line-height:2; }
+  .host .role{ display:block; font-size:12px; color:#a4948c; letter-spacing:0.15em; margin-bottom:6px; }
+  .host-line{ margin-bottom:2px; }
+  .tel-link{
+    color:var(--plum);
+    text-decoration:underline;
+    text-underline-offset:3px;
+    font-weight:700;
   }
-  .host .role{ display:block; font-size:12px; color:#a4948c; margin-bottom:4px; letter-spacing:0.15em;}
-  .host b{ color:var(--plum); }
-
-  .placeholder-note{
-    text-align:center;
-    font-size:10.5px;
-    color:#b39a8f;
-    padding-bottom:22px;
-    margin-top:-14px;
-  }
+  .host-note{ margin-top:10px; font-size:12.5px; color:#8a7a73; }
 </style>
 </head>
 <body>
 <div class="card">
+  <img src="back.jpg" alt="고희연 초대장" class="card-image">
 
-    <div class="hero">
-      <div style="height:3185px;">
-    </div>
-  
+  <div class="content-below">
     <div class="btn-row">
-      <a class="btn solid" href="https://pcmap.place.naver.com/restaurant/12950069/home" target="_blank">📍 길찾기<br>
+      <a class="btn-solid" href="https://pcmap.place.naver.com/restaurant/12950069/home" target="_blank">📍 길찾기</a>
     </div>
-  
+
     <div class="host">
       <span class="role">모시는 이</span>
-      <a class="btn outline" href="tel:010-7467-1147">장녀 전미령</a> · 사위 이시용<br>
-      <a class="btn outline" href="tel:010-2884-8979">차녀 전이슬</a> · 사위 공민석<br>
-       자녀일동 올림
+      <div class="host-line"><a class="tel-link" href="tel:010-7467-1147">장녀 전미령</a> · 사위 이시용</div>
+      <div class="host-line"><a class="tel-link" href="tel:010-2884-8979">차녀 전이슬</a> · 사위 공민석</div>
+      <div class="host-note">자녀일동 올림</div>
     </div>
-
-
-  
   </div>
 </div>
 </body>
